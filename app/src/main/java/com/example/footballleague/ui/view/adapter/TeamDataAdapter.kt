@@ -13,12 +13,12 @@ import com.example.footballleague.ui.view.home.TeamDetailsActivity
 import com.example.footballleague.ui.view.home.TeamsActivity
 import com.example.footballleague.util.Constants.idTeamDetails
 import kotlinx.android.synthetic.main.team_item_row.view.*
-import java.util.*
+import kotlin.collections.ArrayList
 
 
-class TeamDataAdapter :
+class TeamDataAdapter(teams: ArrayList<Team>, context: TeamsActivity) :
     RecyclerView.Adapter<TeamDataAdapter.TeamHolder>() {
-    private lateinit var context: TeamsActivity
+    private var context: TeamsActivity
     private var teams: ArrayList<Team>? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, i: Int): TeamHolder {
@@ -30,18 +30,23 @@ class TeamDataAdapter :
         return TeamHolder(itemView)
     }
 
+    init {
+        this.teams = teams
+
+        this.context = context
+    }
 
     override fun onBindViewHolder(holder: TeamHolder, postion: Int) {
         val team = teams?.get(postion)
         team?.let { holder.setData(it) }
     }
 
-
-    fun setTeamList(teams: ArrayList<Team>, context: TeamsActivity) {
-        this.teams = teams
-        notifyDataSetChanged()
-        this.context = context
-    }
+//
+//    fun setTeamList(teams: ArrayList<Team>, context: TeamsActivity) {
+//        this.teams = teams
+//        notifyDataSetChanged()
+//        this.context = context
+//    }
 
     override fun getItemCount() = teams?.size ?: 0
 
