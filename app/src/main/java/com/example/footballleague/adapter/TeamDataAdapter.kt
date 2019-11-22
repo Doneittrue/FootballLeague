@@ -3,6 +3,7 @@ package com.example.footballleague.adapter
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -37,16 +38,13 @@ class TeamDataAdapter :
     }
 
 
-    override fun getItemCount(): Int {
-        return 6
-
-    }
-
-    fun setTeamList(teams: ArrayList<Team>,context: TeamsActivity) {
+    fun setTeamList(teams: ArrayList<Team>, context: TeamsActivity) {
         this.teams = teams
         notifyDataSetChanged()
-        this.context=context;
+        this.context = context
     }
+
+    override fun getItemCount() = teams?.size ?: 0
 
     inner class TeamHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun setData(team: Team) {
@@ -54,33 +52,11 @@ class TeamDataAdapter :
             itemView.tvClubColor.text = team.clubColors
             itemView.tvUrl.text = team.website
             itemView.tvVenue.text = team.venue
-//            itemView.inset.setOnClickListener {
-////                val area = Area(team.area.id, team.area.name)
-//                val team = Team(
-//                    team.address,
-////                    area ,
-//                    team.clubColors,
-//                    team.crestUrl,
-//                    team.email,
-//                    team.founded,
-//                    team.id,
-//                    team.lastUpdated,
-//                    team.name,
-//                    team.phone,
-//                    team.shortName,
-//                    team.tla,
-//                    team.venue,
-//                    team.website
-//                )
-//
-//                teamViewModel.insert(team)
-//                context.toast("save")
-//
-//            }
-
             itemView.cvTeam.setOnClickListener {
+
                 val intent = Intent(context, TeamDetailsActivity::class.java)
                 intent.putExtra(idTeamDetails, team.id)
+                Log.i("teem", "id of team" + team.id)
                 context.startActivity(intent)
             }
 

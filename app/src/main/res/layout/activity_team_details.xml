@@ -2,8 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" xmlns:bind="http://schemas.android.com/apk/res-auto"
+        xmlns:bind="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent" android:layout_height="match_parent"
         tools:context=".ui.home.view.TeamDetailsActivity">
 
 
@@ -60,7 +60,7 @@
             bind:layout_constraintStart_toStartOf="@+id/tvPhone"
             bind:layout_constraintTop_toBottomOf="@+id/tvPhone"
             bind:layout_constraintHorizontal_bias="1.0"
-       />
+    />
     <TextView
             android:id="@+id/tvClubColors"
             android:layout_width="0dp"
@@ -73,22 +73,31 @@
             bind:layout_constraintStart_toStartOf="@+id/tvEmail"
             bind:layout_constraintTop_toBottomOf="@+id/tvEmail"
             bind:layout_constraintHorizontal_bias="1.0"
-        />
-        <TextView
-                android:id="@+id/tvVenue"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tvClubColors"
-                android:layout_marginTop="8dp"
-                android:padding="4dp"
-                android:textColor="@color/colorAccent"
-                android:textSize="16sp"
-                bind:layout_constraintEnd_toEndOf="@+id/tvClubColors"
-                bind:layout_constraintStart_toStartOf="@+id/tvClubColors"
-                bind:layout_constraintTop_toBottomOf="@+id/tvClubColors"
-                bind:layout_constraintHorizontal_bias="1.0"
-        />
+    />
+    <TextView
+            android:id="@+id/tvVenue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvClubColors"
+            android:layout_marginTop="8dp"
+            android:padding="4dp"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp"
+            bind:layout_constraintEnd_toEndOf="@+id/tvClubColors"
+            bind:layout_constraintStart_toStartOf="@+id/tvClubColors"
+            bind:layout_constraintTop_toBottomOf="@+id/tvClubColors"
+            bind:layout_constraintHorizontal_bias="1.0"
+    />
 
 
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_team_player"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:padding="4dp"
+            bind:layout_constraintTop_toBottomOf="@+id/tvVenue"
+            bind:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            bind:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+    />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

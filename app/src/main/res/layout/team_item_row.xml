@@ -78,6 +78,7 @@
             bind:layout_constraintTop_toBottomOf="@+id/tvClubColor"
          />
 
+
       </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
   </LinearLayout>

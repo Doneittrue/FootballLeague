@@ -27,13 +27,13 @@ class TeamDetailsRepository {
 
                     mutableLiveData.value = response.body()
                     Log.i("onResponsexxxx", "" + Gson().toJson(teamResponse))
-
                 }
 
             }
 
             override fun onFailure(call: Call<TeamDetailsModels>, t: Throwable) {
                 Log.i("asdsad", "onFailure")
+
             }
         })
 

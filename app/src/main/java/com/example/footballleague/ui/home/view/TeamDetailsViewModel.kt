@@ -9,8 +9,8 @@ class TeamDetailsViewModel : ViewModel() {
 
     private var teamDetailsRepository: TeamDetailsRepository =
         TeamDetailsRepository()
-
     fun getDetailsTeam(id:Int): LiveData<TeamDetailsModels> {
+
         return teamDetailsRepository.getMutableLiveData(id)
     }
 }
