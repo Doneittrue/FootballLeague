@@ -15,9 +15,9 @@
             android:theme="@style/AppTheme">
         <activity android:name=".wishlist.WhilstActivity">
         </activity>
-        <activity android:name=".ui.home.view.TeamDetailsActivity">
+        <activity android:name=".ui.view.home.TeamDetailsActivity">
         </activity>
-        <activity android:name=".ui.home.view.TeamsActivity">
+        <activity android:name=".ui.view.home.TeamsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
