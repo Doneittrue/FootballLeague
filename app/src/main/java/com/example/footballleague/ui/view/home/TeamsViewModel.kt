@@ -1,4 +1,4 @@
-package com.example.footballleague.ui.home.view
+package com.example.footballleague.ui.view.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel

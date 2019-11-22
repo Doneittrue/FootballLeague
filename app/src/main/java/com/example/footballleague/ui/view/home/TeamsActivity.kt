@@ -1,4 +1,4 @@
-package com.example.footballleague.ui.home.view
+package com.example.footballleague.ui.view.home
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,8 +6,8 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.footballleague.R
-import com.example.footballleague.adapter.TeamDataAdapter
 import com.example.footballleague.data.network.responses.teams_model.Team
+import com.example.footballleague.ui.view.adapter.TeamDataAdapter
 import kotlinx.android.synthetic.main.teams_activity.*
 
 class TeamsActivity : AppCompatActivity() {

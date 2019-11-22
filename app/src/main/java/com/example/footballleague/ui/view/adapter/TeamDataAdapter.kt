@@ -1,6 +1,5 @@
-package com.example.footballleague.adapter
+package com.example.footballleague.ui.view.adapter
 
-import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.util.Log
@@ -10,8 +9,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.footballleague.R
 import com.example.footballleague.data.network.responses.teams_model.Team
-import com.example.footballleague.ui.home.view.TeamDetailsActivity
-import com.example.footballleague.ui.home.view.TeamsActivity
+import com.example.footballleague.ui.view.home.TeamDetailsActivity
+import com.example.footballleague.ui.view.home.TeamsActivity
 import com.example.footballleague.util.Constants.idTeamDetails
 import kotlinx.android.synthetic.main.team_item_row.view.*
 import java.util.*

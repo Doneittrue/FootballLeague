@@ -1,7 +1,6 @@
-package com.example.footballleague.ui.home.view
+package com.example.footballleague.ui.view.home
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -10,10 +9,8 @@ import com.example.footballleague.R
 import com.example.footballleague.data.network.responses.team_details_model.Squad
 import com.example.footballleague.data.network.responses.team_details_model.TeamDetailsModels
 import com.example.footballleague.util.Constants
-import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_team_details.*
-import kotlinx.android.synthetic.main.teams_activity.*
-import com.example.footballleague.adapter.TeamPlayerAdapter as TeamPlayerAdapter
+import com.example.footballleague.ui.view.adapter.TeamPlayerAdapter as TeamPlayerAdapter
 
 class TeamDetailsActivity : AppCompatActivity() {
     private var teamDetailsViewModel: TeamDetailsViewModel? = null

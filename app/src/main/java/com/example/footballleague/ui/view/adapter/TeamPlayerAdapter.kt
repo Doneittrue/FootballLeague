@@ -1,4 +1,4 @@
-package com.example.footballleague.adapter
+package com.example.footballleague.ui.view.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.footballleague.R
 import com.example.footballleague.data.network.responses.team_details_model.Squad
-import com.example.footballleague.ui.home.view.TeamDetailsActivity
+import com.example.footballleague.ui.view.home.TeamDetailsActivity
 import kotlinx.android.synthetic.main.team_player_item_row.view.*
 
 
